@@ -1,0 +1,3189 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>GroupDocs.Merger</name>
+  </assembly>
+  <members>
+    <member name="T:GroupDocs.Merger.Domain.Common.CreateSplitStream">
+      <summary>
+            Delegate that defines method to create output split stream.
+            </summary>
+      <param name="number">The page or line number that is used for the document splitting.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.ReleaseSplitStream">
+      <summary>
+            Delegate that defines method to release output split stream.
+            </summary>
+      <param name="number">The page or line number that is used for the document splitting.</param>
+      <param name="createSplitStream">The stream created by <paramref name="createSplitStream" /> method.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.CreatePageStream">
+      <summary>
+            Delegate that defines method to create output page preview stream.
+            </summary>
+      <param name="pageNumber">The page number.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.ReleasePageStream">
+      <summary>
+            Delegate that defines method to release output page preview stream.
+            </summary>
+      <param name="pageNumber">The page number.</param>
+      <param name="createPageStream">The stream created by <paramref name="createPageStream" /> method.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.Func`1">
+      <summary>
+            Encapsulates a method that has no parameters and returns a value of the type specified by the <typeparamref name="TResult" /> parameter.
+            </summary>
+      <typeparam name="TResult">The type of the return value of the method that this delegate encapsulates.</typeparam>
+      <returns>The return value of the method that this delegate encapsulates.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.Func`2">
+      <summary>
+            Encapsulates a method that has one parameter and returns a value of the type specified by the <typeparamref name="TResult" /> parameter.
+            </summary>
+      <typeparam name="T">The type of the parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="TResult">The type of the return value of the method that this delegate encapsulates.</typeparam>
+      <param name="arg">The parameter of the method that this delegate encapsulates.</param>
+      <returns>The return value of the method that this delegate encapsulates.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.Func`3">
+      <summary>
+            Encapsulates a method that has two parameters and returns a value of the type specified by the <typeparamref name="TResult" /> parameter.
+            </summary>
+      <typeparam name="T1">The type of first parameters of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="T2">The type of the second parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="TResult">The type of the return value of the method that this delegate encapsulates.</typeparam>
+      <param name="arg1">The first parameter of the method that this delegate encapsulates.</param>
+      <param name="arg2">The second parameter of the method that this delegate encapsulates.</param>
+      <returns>The return value of the method that this delegate encapsulates.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.Func`4">
+      <summary>
+            Encapsulates a method that has three parameters and returns a value of the type specified by the <typeparamref name="TResult" /> parameter.
+            </summary>
+      <typeparam name="T1">The type of the first parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="T2">The type of the second parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="T3">The type of the third parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="TResult">The type of the return value of the method that this delegate encapsulates.</typeparam>
+      <param name="arg1">The first parameter of the method that this delegate encapsulates.</param>
+      <param name="arg2">The second parameter of the method that this delegate encapsulates.</param>
+      <param name="arg3">The third parameter of the method that this delegate encapsulates.</param>
+      <returns>The return value of the method that this delegate encapsulates.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.Func`5">
+      <summary>
+            Encapsulates a method that has four parameters and returns a value of the type specified by the <typeparamref name="TResult" /> parameter.
+            </summary>
+      <typeparam name="T1">The type of the first parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="T2">The type of the second parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="T3">The type of the third parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="T4">The type of the fourth parameter of the method that this delegate encapsulates.</typeparam>
+      <typeparam name="TResult">The type of the return value of the method that this delegate encapsulates.</typeparam>
+      <param name="arg1">The first parameter of the method that this delegate encapsulates.</param>
+      <param name="arg2">The second parameter of the method that this delegate encapsulates.</param>
+      <param name="arg3">The third parameter of the method that this delegate encapsulates.</param>
+      <param name="arg4">The fourth parameter of the method that this delegate encapsulates.</param>
+      <returns>The return value of the method that this delegate encapsulates.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Common.NamespaceDoc">
+      <summary>
+            The namespace provides common delegates.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.FileType">
+      <summary>
+            Represents file type. Provides methods to obtain list of all file types supported by <b>GroupDocs.Merger</b>, 
+            detect file type by extension etc.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    Learn more about file formats supported by GroupDocs.Merger:
+                 <a target="_blank" href="https://docs.groupdocs.com/display/mergernet/Supported+Document+Types">Full list of supported document formats</a></item>
+          <item>
+                    Learn more about getting supported file types in code: 
+                  <a target="_blank" href="https://docs.groupdocs.com/display/mergernet/Get+supported+file+types">How to get supported file formats in code</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.FileType.FileFormat">
+      <summary>
+            File type name e.g. "Microsoft Word Document".
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.FileType.Extension">
+      <summary>
+            Filename suffix (including the period ".") e.g. ".doc".
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.Unknown">
+      <summary>
+            Represents unknown file type.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VSSX">
+      <summary>
+            Visio Stencil File (.vssx) are drawing stencils created with Microsoft Visio 2013 and above. The VSSX file format can be opened with Visio 2013 and above. Visio files are known for representation of a variety of drawing elements such as collection of shapes, connectors, flowcharts, network layout, UML diagrams, 
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vssx">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VSDX">
+      <summary>
+            Visio Drawing (.vsdx) represents Microsoft Visio file format introduced from Microsoft Office 2013 onwards. It was developed to replace the binary file format, .VSD, which is supported by earlier versions of Microsoft Visio.
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vsdx">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VSDM">
+      <summary>
+            Visio Macro-Enabled Drawing (.vsdm) are drawing files created with Microsoft Visio application that supports macros. VSDM files are OPC/XML drawings that are similar to VSDX, but also provide the capability to run macros when the file is opened. 
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vsdm">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VSTX">
+      <summary>
+            Visio Drawing Template (.vstx) are drawing template files created with Microsoft Visio 2013 and above. These VSTX files provide starting point for creating Visio drawings, saved as .VSDX files, with default layout and settings. 
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vstx">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VSTM">
+      <summary>
+            Visio Macro-Enabled Drawing Template (.vstm) are template files created with Microsoft Visio that support macros. Unlike VSDX files, files created from VSTM templates can run macros that are developed in Visual Basic for Applications (VBA)  code. 
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vstm">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VSSM">
+      <summary>
+            Visio Macro-Enabled Stencil File (.vssm) are Microsoft Visio Stencil files that support provide support for macros. A VSSM file when opened allows to run the macros to achieve desired formatting and placement of shapes in a diagram.
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vssm">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VSX">
+      <summary>
+            Visio Stencil XML File (.vsx) refers to stencils that consist of drawings and shapes that are used for creating diagrams in Microsoft Visio. VSX files are saved in XML file format and was supported till Visio 2013.
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vsx">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VTX">
+      <summary>
+            Visio Template XML File (.vtx) is a Microsoft Visio drawing template that is saved to disc in XML file format. The template is aimed to provide a file with basic settings that can be used to create multiple Visio files of the same settings.
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vtx">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.VDX">
+      <summary>
+            Visio Drawing XML File (.vdx)is a drawing or chart created in Microsoft Visio, but saved in XML format have .VDX extension. A Visio drawing XML file is created in Visio software, which is developed by Microsoft.
+            Learn more about this file format <a href="https://docs.fileformat.com/image/vdx">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.EPUB">
+      <summary>
+            Open eBook File (.epub) are an e-book file format that provide a standard digital publication format for publishers and consumers. The format has been so common by now that it is supported by many e-readers and software applications.
+            Learn more about this file format <a href="https://docs.fileformat.com/ebook/epub">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.BMP">
+      <summary>
+            Bitmap Image File (.bmp) represent files that are used to store bitmap digital images. Learn more about this file format <a href="https://docs.fileformat.com/image/bmp">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.JPG">
+      <summary>
+            JPEG Image (.jpg)
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.JPEG">
+      <summary>
+            JPEG Image (.jpeg) is a type of image format that is saved using the method of lossy compression. The output image, as result of compression, is a trade-off between storage size and image quality.
+            Learn more about this file format <a href="https://docs.fileformat.com/image/jpeg">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.PNG">
+      <summary>
+            Portable Network Graphic (.png) is a type of raster image file format that use loseless compression.
+            Learn more about this file format <a href="https://docs.fileformat.com/image/png">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.PS">
+      <summary>
+            PostScript File (.ps)
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.TIF">
+      <summary>
+            Tagged Image File (.tif)
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.TIFF">
+      <summary>
+            Tagged Image File Format (.tiff)
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.GIF">
+      <summary>
+            Graphical Interchange Format File (.gif)
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.HTML">
+      <summary>
+            Hypertext Markup Language File (.html) is the extension for web pages created for display in browsers. 
+            Learn more about this file format <a href="https://docs.fileformat.com/web/html">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.MHT">
+      <summary>
+            MHTML Web Archive (.mht) is a web page archive format that can be created by a number of different applications. 
+            Learn more about this file format <a href="https://docs.fileformat.com/web/mhtml">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.MHTML">
+      <summary>
+            MIME HTML File (.mhtml) is a web page archive format that can be created by a number of different applications. 
+            Learn more about this file format <a href="https://docs.fileformat.com/web/mhtml">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.ONE">
+      <summary>
+            OneNote Document (.one) files are created by Microsoft OneNote application. OneNote lets you gather information using the application as if you are using your draftpad for taking notes.
+            Learn more about this file format <a href="https://docs.fileformat.com/note-taking/one">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.PDF">
+      <summary>
+            Portable Document Format File (.pdf) isa file format that was to introduced as a standard for representation of documents and other reference material in a format that is independent of application software, hardware as well as Operating System.
+            Learn more about this file format <a href="https://docs.fileformat.com/view/pdf">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XPS">
+      <summary>
+            XML Paper Specification File (.xps) represents page layout files that are based on XML Paper Specifications created by Microsoft.
+            Learn more about this file format <a href="https://docs.fileformat.com/page-description-language/xps">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.TEX">
+      <summary>
+            LaTeX Source Document (.tex) is a language that comprises of programming as well as mark-up features, used to typeset documents.
+            Learn more about this file format <a href="https://docs.fileformat.com/page-description-language/tex">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.PPT">
+      <summary>
+            PowerPoint Presentation (.ppt) represents PowerPoint file that consists of a collection of slides for displaying as SlideShow. It specifies the Binary File Format used by Microsoft PowerPoint 97-2003.
+            Learn more about this file format <a href="https://docs.fileformat.com/presentation/ppt">here</a>.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.PPTX">
+      <summary>
+            PowerPoint Open XML Presentation (.pptx) is a presentation file created with popular Microsoft PowerPoint application. Unlike the previous version of presentation file format PPT which was binary, the PPTX format is based on the Microsoft PowerPoint open XML presentation file format. 
+            Learn more about this file format <a href="https://docs.fileformat.com/presentation/pptx">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.PPS">
+      <summary>
+            PowerPoint Slide Show (.pps) is a file created using Microsoft PowerPoint for Slide Show purpose. PPS file reading and creation is supported by Microsoft PowerPoint 97-2003.
+            Learn more about this file format <a href="https://docs.fileformat.com/presentation/pps">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.PPSX">
+      <summary>
+            PowerPoint Open XML Slide Show (.ppsx) is a file created using Microsoft PowerPoint 2007 and above for Slide Show purpose.
+            Learn more about this file format <a href="https://docs.fileformat.com/presentation/ppsx">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.ODP">
+      <summary>
+            OpenDocument Presentation (.odp) represents presentation file format used by OpenOffice.org in the OASISOpen standard.
+            Learn more about this file format <a href="https://docs.fileformat.com/presentation/odp">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.OTP">
+      <summary>
+            OpenDocument Presentation Template (.otp) represents presentation template files created by applications in OASIS OpenDocument standard format.
+            Learn more about this file format <a href="https://docs.fileformat.com/presentation/otp">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XLS">
+      <summary>
+            Excel Spreadsheet (.xls) is a file that can be created by Microsoft Excel as well as other similar spreadsheet programs such as OpenOffice Calc or Apple Numbers. 
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/xls">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XLSX">
+      <summary>
+            Microsoft Excel Open XML Spreadsheet (.xlsx) is a well-known format for Microsoft Excel documents that was introduced by Microsoft with the release of Microsoft Office 2007. 
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/xlsx">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XLSM">
+      <summary>
+            Excel Open XML Macro-Enabled Spreadsheet (.xlsm) is a type of Spreasheet files that support macros.
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/xlsm">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XLSB">
+      <summary>
+            Excel Binary Spreadsheet (.xlsb) file format specifies the Excel Binary File Format, which is a collection of records and structures that specify Excel workbook content. 
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/xlsb">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.CSV">
+      <summary>
+            Comma Separated Values File (.csv) represents plain text files that contain records of data with comma separated values.
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/csv">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.TSV">
+      <summary>
+            Tab Separated Values File (.tsv) represents data separated with tabs in plain text format. 
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/tsv">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.ODS">
+      <summary>
+            OpenDocument Spreadsheet (.ods)
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/ods">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XLTM">
+      <summary>
+            Excel Open XML Macro-Enabled Spreadsheet Template (.xltm) represents files that are generated by Microsoft Excel as Macro-enabled template files. XLTM files are similar to XLTX in structure other than that the later doesn't support creating template files with macros. 
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/xltm">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XLTX">
+      <summary>
+            Excel Open XML Spreadsheet Template (.xltx) files are based on the Office OpenXML file format specifications. It is used to create a standard template file that can be utilized to generate XLSX files that exhibit the same settings as specified in the XLTX file.
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/xltx">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XLT">
+      <summary>
+            Excel Template File (.xlt) are template files created with Microsoft Excel which is a spreadsheet application which comes as part of Microsoft Office suite.  Microsoft Office 97-2003 supported creating new XLT files as well as opening these. 
+            Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/xlt">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.XLAM">
+      <summary>
+            Excel Macro-Enabled Add-In (.xlam)
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.DOC">
+      <summary>
+            Microsoft Word Document (.doc) represent documents generated by Microsoft Word or other word processing documents in binary file format.
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/doc">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.DOCX">
+      <summary>
+            Microsoft Word Open XML Document (.docx) is a well-known format for Microsoft Word documents. Introduced from 2007 with the release of Microsoft Office 2007, the structure of this new Document format was changed from plain binary to a combination of XML and binary files. 
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/docx">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.DOCM">
+      <summary>
+            Word Open XML Macro-Enabled Document (.docm) files are Microsoft Word 2007 or higher generated documents with the ability to run macros.
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/docm">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.DOT">
+      <summary>
+            Word Document Template (.dot) files are template files created by Microsoft Word to have pre-formatted settings for generation of further DOC or DOCX files. 
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/dot">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.DOTX">
+      <summary>
+            Word Open XML Document Template (.dotx) are template files created by Microsoft Word to have pre-formatted settings for generation of further DOCX files. 
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/dotx">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.DOTM">
+      <summary>
+            Word Open XML Macro-Enabled Document Template (.dotm) represents template file created with Microsoft Word 2007 or higher.
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/dotm">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.RTF">
+      <summary>
+            Rich Text Format File (.rtf) introduced and documented by Microsoft, the Rich Text Format (RTF) represents a method of encoding formatted text and graphics for use within applications. 
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/rtf">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.TXT">
+      <summary>
+            Plain Text File (.txt) represents a text document that contains plain text in the form of lines. 
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/txt">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.ERR">
+      <summary>
+            Error Log File (.err) is a text file that contains error messages generated by a program. 
+            Learn more about this file format <a href="https://fileinfo.com/extension/err">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.ODT">
+      <summary>
+            OpenDocument Text Document (.odt) files are type of documents created with word processing applications that are based on OpenDocument Text File format. 
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/odt">here</a>. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.FileType.OTT">
+      <summary>
+            OpenDocument Document Template (.ott) represent template documents generated by applications in compliance with the OASIS' OpenDocument standard format. 
+            Learn more about this file format <a href="https://docs.fileformat.com/word-processing/ott">here</a>. 
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.FromExtension(System.String)">
+      <summary>
+            Maps file extension to file type.
+            </summary>
+      <param name="extension">File extension (including the period ".").</param>
+      <exception cref="T:System.ArgumentException">Thrown when <paramref name="extension" /> is null or empty string.</exception>
+      <returns>When file type is supported returns it, otherwise returns default <see cref="F:GroupDocs.Merger.Domain.FileType.Unknown" /> file type.</returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.GetSupportedFileTypes">
+      <summary>
+            Retrieves supported file types
+            </summary>
+      <returns>Returns sequence of supported file types</returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.Equals(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Determines whether the current <see cref="T:GroupDocs.Merger.Domain.FileType" /> is the same as specified <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.
+            </summary>
+      <param name="other">The object to compare with the current <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</param>
+      <returns>
+        <code>true</code> if both <see cref="T:GroupDocs.Merger.Domain.FileType" /> objects are the same; otherwise, <code>false</code></returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.Equals(System.Object)">
+      <summary>
+            Determines whether the current <see cref="T:GroupDocs.Merger.Domain.FileType" /> is the same as specified object.
+            </summary>
+      <param name="obj">The object to compare with the current <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</param>
+      <returns>
+        <code>true</code> if <code>obj</code> parameter is <see cref="T:GroupDocs.Merger.Domain.FileType" /> and is the same as current <see cref="T:GroupDocs.Merger.Domain.FileType" /> object; otherwise, <code>false</code></returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.GetHashCode">
+      <summary>
+            Returns the hash code for the current <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.
+            </summary>
+      <returns>A hash code for the current <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.op_Equality(GroupDocs.Merger.Domain.FileType,GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Determines whether two <see cref="T:GroupDocs.Merger.Domain.FileType" /> objects are the same.
+            </summary>
+      <param name="left">Left <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</param>
+      <param name="right">Right <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</param>
+      <returns>
+        <code>true</code> if both <see cref="T:GroupDocs.Merger.Domain.FileType" /> objects are the same; otherwise, <code>false</code></returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.op_Inequality(GroupDocs.Merger.Domain.FileType,GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Determines whether two <see cref="T:GroupDocs.Merger.Domain.FileType" /> objects are not the same.
+            </summary>
+      <param name="left">Left <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</param>
+      <param name="right">Right <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</param>
+      <returns>
+        <code>true</code> if both <see cref="T:GroupDocs.Merger.Domain.FileType" /> objects are not the same; otherwise, <code>false</code></returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.IsText(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Determines whether input <see cref="T:GroupDocs.Merger.Domain.FileType" /> is primitive text format.
+            </summary>
+      <param name="fileType">The <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</param>
+      <returns>
+        <code>true</code> if input <see cref="T:GroupDocs.Merger.Domain.FileType" /> is primitive text format; otherwise, <code>false</code></returns>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.FileType.IsImage(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Determines whether input <see cref="T:GroupDocs.Merger.Domain.FileType" /> is primitive text format.
+            </summary>
+      <param name="fileType">The <see cref="T:GroupDocs.Merger.Domain.FileType" /> object.</param>
+      <returns>
+        <code>true</code> if input <see cref="T:GroupDocs.Merger.Domain.FileType" /> is primitive image format; otherwise, <code>false</code></returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.AddPasswordOptions">
+      <summary>
+            Provides options for adding document password.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.AddPasswordOptions.Password">
+      <summary>
+            The password for document protection.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.AddPasswordOptions.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.AddPasswordOptions" /> class.
+            </summary>
+      <param name="password">The password.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ExtractOptions">
+      <summary>
+            Provides options to extract the document pages.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ExtractOptions.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.ExtractOptions" /> class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ExtractOptions.#ctor(System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.ExtractOptions" /> class.
+            </summary>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ExtractOptions.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.ExtractOptions" /> class.
+            </summary>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ExtractOptions.#ctor(System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.ExtractOptions" /> class.
+            </summary>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ImageJoinMode">
+      <summary>
+            Possible modes for the image joining.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.ImageJoinMode.Horizontal">
+      <summary>
+            Specifies Horizontal image joining.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.ImageJoinMode.Vertical">
+      <summary>
+            Specifies Vertical image joining.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ImageJoinOptions">
+      <summary>
+            The image join options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ImageJoinOptions.Type">
+      <summary>
+            The image file type.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ImageJoinOptions.Mode">
+      <summary>
+            The image join mode.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ImageJoinOptions.#ctor">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.ImageJoinOptions" /> class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ImageJoinOptions.#ctor(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.ImageJoinOptions" /> class.
+            </summary>
+      <param name="fileType">The image file type.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ImageJoinOptions.#ctor(GroupDocs.Merger.Domain.Options.ImageJoinMode)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.ImageJoinOptions" /> class.
+            </summary>
+      <param name="imageJoinMode">The image join mode.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ImageJoinOptions.#ctor(GroupDocs.Merger.Domain.FileType,GroupDocs.Merger.Domain.Options.ImageJoinMode)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.ImageJoinOptions" /> class.
+            </summary>
+      <param name="fileType">The image file type.</param>
+      <param name="imageJoinMode">The image join mode.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ImportDocumentOptions">
+      <summary>
+            Provides options for the embedded document import.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                        More about adding attachment to PDF documents:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/how-to-add-attachment-to-pdf-document/">How to add attachment to PDF document.</a></item>
+          <item>
+                        More about adding document to Word processing via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-word-processing-via-ole/">Add document to Word processing via OLE.</a></item>
+          <item>
+                        More about adding document to Presentation via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-presentation-via-ole/">Add document to Presentation via OLE.</a></item>
+          <item>
+                        More about adding document to Spreadsheet via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-spreadsheet-via-ole/">Add document to Spreadsheet via OLE.</a></item>
+          <item>
+                        More about adding document to Diagram via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-diagram-via-ole/">Add document to Diagram via OLE.</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ImportDocumentOptions.ObjectData">
+      <summary>
+            The data of the embedded object.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ImportDocumentOptions.Extension">
+      <summary>
+            The extension of the embedded object.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ImportDocumentOptions.PageNumber">
+      <summary>
+            The page number for inserting of the embedded object.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ImportDocumentOptions.#ctor(System.Byte[],System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.ImportDocumentOptions" /> class.
+            </summary>
+      <param name="objectData">The data of the embedded object.</param>
+      <param name="extension">The extension of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ImportDocumentOptions.#ctor(System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.ImportDocumentOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ImportDocumentOptions.GetImageData(System.String)">
+      <summary>
+            Gets image data of the embedded object.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IAddPasswordOptions">
+      <summary>
+            Interface for the password adding options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IAddPasswordOptions.Password">
+      <summary>
+            The password for document protection.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IExtractOptions">
+      <summary>
+            Interface for options to extract the document pages.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IImageJoinOptions">
+      <summary>
+            Interface for the image joining options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IImageJoinOptions.Type">
+      <summary>
+            The image file type.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IImageJoinOptions.Mode">
+      <summary>
+            The image join mode.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IImportDocumentOptions">
+      <summary>
+            Interface for import of the embedded document.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IImportDocumentOptions.ObjectData">
+      <summary>
+            The data of the embedded object.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IImportDocumentOptions.Extension">
+      <summary>
+            The extension of the embedded object.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IImportDocumentOptions.PageNumber">
+      <summary>
+            The page number for inserting of the embedded object.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IJoinOptions">
+      <summary>
+            Interface for the document joining options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IJoinOptions.Type">
+      <summary>
+            The type of the file to join.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ILoadOptions">
+      <summary>
+            Interface for the document loading options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ILoadOptions.Type">
+      <summary>
+            The type of the file to open.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ILoadOptions.Extension">
+      <summary>
+            The extension of the file to open.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ILoadOptions.Password">
+      <summary>
+            The password for opening password-protected file.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ILoadOptions.Encoding">
+      <summary>
+            The encoding used when opening text-based files such as <see cref="F:GroupDocs.Merger.Domain.FileType.CSV" /> or <see cref="F:GroupDocs.Merger.Domain.FileType.TXT" />.
+            Default value is <see cref="P:System.Text.Encoding.Default" />.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IMoveOptions">
+      <summary>
+            Interface for the moving page options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IMoveOptions.PageNumberToMove">
+      <summary>
+            Gets or sets the page number to move.
+            </summary>
+      <value>The page number to move.</value>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IMoveOptions.NewPageNumber">
+      <summary>
+            Gets or sets the new page number.
+            </summary>
+      <value>The new page number.</value>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IOleDiagramOptions">
+      <summary>
+            Interface for import options of the embedded document to Diagram via OLE.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleDiagramOptions.X">
+      <summary>
+            The X coordinate of the embedded object shape's pin (center of rotation) in relation to the page.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleDiagramOptions.Y">
+      <summary>
+            The Y coordinate of the embedded object shape's pin (center of rotation) in relation to the page.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleDiagramOptions.ImageData">
+      <summary>
+            The image data of the embedded object.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IOlePresentationOptions">
+      <summary>
+            Interface for import options of the embedded document to Presentation via OLE.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOlePresentationOptions.X">
+      <summary>
+            The X coordinate of the embedded object frame.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOlePresentationOptions.Y">
+      <summary>
+            The Y coordinate of the embedded object frame.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IOleSpreadsheetOptions">
+      <summary>
+            Interface for import options of the embedded document to Spreadsheet via OLE.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleSpreadsheetOptions.RowIndex">
+      <summary>
+            The upper left row index.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleSpreadsheetOptions.ColumnIndex">
+      <summary>
+            The upper left column index.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleSpreadsheetOptions.ImageData">
+      <summary>
+            The data of the Ole object image.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IOleWordProcessingOptions">
+      <summary>
+            Interface for import options of the embedded document to Word processing via OLE.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleWordProcessingOptions.Left">
+      <summary>
+            The left coordinate of the Ole object image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleWordProcessingOptions.Top">
+      <summary>
+            The top coordinate of the Ole object image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOleWordProcessingOptions.ImageData">
+      <summary>
+            The data of the Ole object image.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IOptions">
+      <summary>
+            Interface for the base options.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IOrientationOptions">
+      <summary>
+            Interface for the page orientation options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IOrientationOptions.Mode">
+      <summary>
+            Gets the mode for the page orientation.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IPageOptions">
+      <summary>
+            Interface for the page options
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IPageOptions.Pages">
+      <summary>
+            Page numbers for the page options.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IPager">
+      <summary>
+            Interface for apply option (pages, range and etc.)
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IPager.Pages">
+      <summary>
+            List of page number on which operation will be applied. Note: first page have number 1.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IPdfAttachmentOptions">
+      <summary>
+            Interface for options of the embedded document to PDF as attachment.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IPreviewOptions">
+      <summary>
+            Interface for the preview options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IPreviewOptions.Width">
+      <summary>
+            Preview width.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IPreviewOptions.Height">
+      <summary>
+            Preview height.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IPreviewOptions.Mode">
+      <summary>
+            Gets the mode for preview.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IPreviewOptions.CreateStream">
+      <summary>
+            Delegate that defines method to create output page preview stream.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IPreviewOptions.ReleaseStream">
+      <summary>
+            Delegate that defines method to release output page preview stream.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.IPreviewOptions.Validate(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Validates the split options.
+            </summary>
+      <param name="fileType">The file type of <see cref="T:GroupDocs.Merger.Domain.FileType" /> class.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.IPreviewOptions.GetPathByPageNumber(System.Int32,System.String)">
+      <summary>
+            Gets the full file path of previewed document by page number with defined extension.
+            </summary>
+      <param name="pageNumber">Page number of preview.</param>
+      <param name="extension">Extension of file.</param>
+      <returns>The full file path.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IRemoveOptions">
+      <summary>
+            Interface for the page removing options.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IRotateOptions">
+      <summary>
+            Interface for the page rotating options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IRotateOptions.Mode">
+      <summary>
+            Gets the mode for rotating (90, 180 or 270 degrees).
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ISaveOptions">
+      <summary>
+            Interface for the document saving options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ISaveOptions.Type">
+      <summary>
+            File type.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ISizeOptions">
+      <summary>
+            Interface for adding embedded object.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ISizeOptions.Width">
+      <summary>
+            The width of the embedded object size.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ISizeOptions.Height">
+      <summary>
+            The height of the embedded object size.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ISplitOptions">
+      <summary>
+            Interface for the page splitting options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ISplitOptions.Mode">
+      <summary>
+            Gets the mode for page splitting.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ISplitOptions.CreateStream">
+      <summary>
+            Delegate that defines method to create output split stream.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ISplitOptions.ReleaseStream">
+      <summary>
+            Delegate that defines method to release output split stream.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ISplitOptions.Validate(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Validates the split options.
+            </summary>
+      <param name="fileType">The file type of <see cref="T:GroupDocs.Merger.Domain.FileType" /> class.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ISplitOptions.GetPathByIndex(System.Int32,System.String)">
+      <summary>
+            Gets the full file path of splitted document by index with defined extension.
+            </summary>
+      <param name="index">Index of splitted document.</param>
+      <param name="extension">Extension of file.</param>
+      <returns>The full file path.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ISwapOptions">
+      <summary>
+            Interface for the page swapping options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ISwapOptions.FirstPageNumber">
+      <summary>
+            First page number to exchange.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ISwapOptions.SecondPageNumber">
+      <summary>
+            Second page number to exchange.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.ITextSplitOptions">
+      <summary>
+            Interface for the text splitting options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ITextSplitOptions.LineNumbers">
+      <summary>
+            Line numbers for text splitting.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ITextSplitOptions.Mode">
+      <summary>
+            Mode for text splitting.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ITextSplitOptions.CreateStream">
+      <summary>
+            Delegate that defines method to create output split stream.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.ITextSplitOptions.ReleaseStream">
+      <summary>
+            Delegate that defines method to release output split stream.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ITextSplitOptions.Validate(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Validates the split options.
+            </summary>
+      <param name="fileType">The file type of <see cref="T:GroupDocs.Merger.Domain.FileType" /> class.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.ITextSplitOptions.GetPathByIndex(System.Int32,System.String)">
+      <summary>
+            Gets the full file path of splitted document by index with defined extension.
+            </summary>
+      <param name="index">Index of splitted document.</param>
+      <param name="extension">Extension of file.</param>
+      <returns>The full file path.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.IUpdatePasswordOptions">
+      <summary>
+            Interface for the password updating options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.IUpdatePasswordOptions.NewPassword">
+      <summary>
+            The new password for document protection.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.JoinOptions">
+      <summary>
+            Provides options for the document joining.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.JoinOptions.Type">
+      <summary>
+            The type of the file to join.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.JoinOptions.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.JoinOptions" /> class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.JoinOptions.#ctor(System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.JoinOptions" /> class.
+            </summary>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.JoinOptions.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.JoinOptions" /> class.
+            </summary>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.JoinOptions.#ctor(System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.JoinOptions" /> class.
+            </summary>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.JoinOptions.#ctor(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.JoinOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to join.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.JoinOptions.#ctor(GroupDocs.Merger.Domain.FileType,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.JoinOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to join.</param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.JoinOptions.#ctor(GroupDocs.Merger.Domain.FileType,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.JoinOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to join.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.JoinOptions.#ctor(GroupDocs.Merger.Domain.FileType,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.JoinOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to join.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.LoadOptions">
+      <summary>
+            Provides options for the document loading.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.LoadOptions.Type">
+      <summary>
+            The type of the file to open.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.LoadOptions.Extension">
+      <summary>
+            The extension of the file to open.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.LoadOptions.Password">
+      <summary>
+            The password for opening password-protected file.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.LoadOptions.Encoding">
+      <summary>
+            The encoding used when opening text-based files such as <see cref="F:GroupDocs.Merger.Domain.FileType.CSV" /> or <see cref="F:GroupDocs.Merger.Domain.FileType.TXT" />.
+            Default value is <see cref="P:System.Text.Encoding.Default" />.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.LoadOptions.#ctor(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.LoadOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to open.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="fileType" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.LoadOptions.#ctor(System.String)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.LoadOptions" /> class.
+            </summary>
+      <param name="password">The password for opening password-protected file.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.LoadOptions.#ctor(System.String,System.Text.Encoding)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.LoadOptions" /> class.
+            </summary>
+      <param name="password">The password for opening password-protected file.</param>
+      <param name="encoding">The encoding used when opening text-based files such as <see cref="F:GroupDocs.Merger.Domain.FileType.CSV" /> or <see cref="F:GroupDocs.Merger.Domain.FileType.TXT" />.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="encoding" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.LoadOptions.#ctor(GroupDocs.Merger.Domain.FileType,System.String)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.LoadOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to open.</param>
+      <param name="password">The password for opening password-protected file.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="fileType" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.LoadOptions.#ctor(GroupDocs.Merger.Domain.FileType,System.String,System.Text.Encoding)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.LoadOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to open.</param>
+      <param name="password">The password for opening password-protected file.</param>
+      <param name="encoding">The encoding used when opening text-based files such as <see cref="F:GroupDocs.Merger.Domain.FileType.CSV" /> or <see cref="F:GroupDocs.Merger.Domain.FileType.TXT" />.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="fileType" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="encoding" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.LoadOptions.#ctor(System.String,GroupDocs.Merger.Domain.FileType,System.String,System.Text.Encoding)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.LoadOptions" /> class.
+            </summary>
+      <param name="extension">The extension of the file to open.</param>
+      <param name="fileType">The type of the file to open.</param>
+      <param name="password">The password for opening password-protected file.</param>
+      <param name="encoding">The encoding used when opening text-based files such as <see cref="F:GroupDocs.Merger.Domain.FileType.CSV" /> or <see cref="F:GroupDocs.Merger.Domain.FileType.TXT" />.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="fileType" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="encoding" /> is null.</exception>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.MoveOptions">
+      <summary>
+            Provides options for moving document page.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.MoveOptions.PageNumberToMove">
+      <summary>
+            Gets or sets the page number to move.
+            </summary>
+      <value>The page number to move.</value>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.MoveOptions.NewPageNumber">
+      <summary>
+            Gets or sets the new page number.
+            </summary>
+      <value>The new page number.</value>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.MoveOptions.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.MoveOptions" /> class.
+            </summary>
+      <param name="pageNumberToMove">The page number to move.</param>
+      <param name="newPageNumber">The new page number.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.OleDiagramOptions">
+      <summary>
+            Provides options for import of the embedded document to Diagram via OLE.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                        More about adding document to Diagram via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-diagram-via-ole/">Add document to Diagram via OLE.</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleDiagramOptions.X">
+      <summary>
+            The X coordinate of the embedded object shape's pin (center of rotation) in relation to the page.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleDiagramOptions.Y">
+      <summary>
+            The Y coordinate of the embedded object shape's pin (center of rotation) in relation to the page.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleDiagramOptions.Width">
+      <summary>
+            The width of the embedded object shape in inches.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleDiagramOptions.Height">
+      <summary>
+            The height of the embedded object shape in inches.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleDiagramOptions.ImageData">
+      <summary>
+            The image data of the embedded object.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleDiagramOptions.#ctor(System.Byte[],System.Byte[],System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleDiagramOptions" /> class.
+            </summary>
+      <param name="objectData">The data of the embedded object.</param>
+      <param name="imageData">The image data of the embedded object.</param>
+      <param name="extension">The extension of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleDiagramOptions.#ctor(System.String,System.Byte[],System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleDiagramOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+      <param name="imageData">The image data of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleDiagramOptions.#ctor(System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleDiagramOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.OlePresentationOptions">
+      <summary>
+            Provides options for import of the embedded document to Presentation via OLE.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                        More about adding document to Presentation via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-presentation-via-ole/">Add document to Presentation via OLE.</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OlePresentationOptions.X">
+      <summary>
+            The X coordinate of the embedded object frame.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OlePresentationOptions.Y">
+      <summary>
+            The Y coordinate of the embedded object frame.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OlePresentationOptions.Width">
+      <summary>
+            The width of the embedded object frame.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OlePresentationOptions.Height">
+      <summary>
+            The height of the embedded object frame.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OlePresentationOptions.#ctor(System.Byte[],System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OlePresentationOptions" /> class.
+            </summary>
+      <param name="objectData">The data of the embedded object.</param>
+      <param name="extension">The extension of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OlePresentationOptions.#ctor(System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OlePresentationOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions">
+      <summary>
+            Provides options for import of the embedded document to Spreadsheet via OLE.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                        More about adding document to Spreadsheet via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-spreadsheet-via-ole/">Add document to Spreadsheet via OLE.</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions.RowIndex">
+      <summary>
+            The upper left row index.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions.ColumnIndex">
+      <summary>
+            The upper left column index.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions.Width">
+      <summary>
+            The width of the Ole object image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions.Height">
+      <summary>
+            The height of the Ole object image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions.ImageData">
+      <summary>
+            The data of the Ole object image.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions.#ctor(System.Byte[],System.Byte[],System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions" /> class.
+            </summary>
+      <param name="objectData">The data of the embedded object.</param>
+      <param name="imageData">The image data of the embedded object.</param>
+      <param name="extension">The extension of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions.#ctor(System.String,System.Byte[],System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+      <param name="imageData">The image data of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions.#ctor(System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleSpreadsheetOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions">
+      <summary>
+            Provides options for import of the embedded document to Word processing via OLE.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                        More about adding document to Word processing via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-word-processing-via-ole/">Add document to Word processing via OLE.</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions.Left">
+      <summary>
+            The left coordinate of the Ole object image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions.Top">
+      <summary>
+            The top coordinate of the Ole object image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions.Width">
+      <summary>
+            The width of the Ole object image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions.Height">
+      <summary>
+            The height of the Ole object image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions.ImageData">
+      <summary>
+            The data of the Ole object image.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions.#ctor(System.Byte[],System.Byte[],System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions" /> class.
+            </summary>
+      <param name="objectData">The data of the embedded object.</param>
+      <param name="imageData">The image data of the embedded object.</param>
+      <param name="extension">The extension of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions.#ctor(System.String,System.Byte[],System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+      <param name="imageData">The image data of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions.#ctor(System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OleWordProcessingOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+      <param name="pageNumber">The page number for adding embedded object.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.OrientationMode">
+      <summary>
+            Defines page orientation.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.OrientationMode.Portrait">
+      <summary>
+            Portrait page mode.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.OrientationMode.Landscape">
+      <summary>
+            Landscape page mode.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.OrientationOptions">
+      <summary>
+            Provides options for the page orientation.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.OrientationOptions.Mode">
+      <summary>
+            Gets the mode for the page orientation.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OrientationOptions.#ctor(GroupDocs.Merger.Domain.Options.OrientationMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OrientationOptions" /> class.
+            </summary>
+      <param name="orientationMode">The orientation mode of <see cref="T:GroupDocs.Merger.Domain.Options.OrientationMode" /></param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OrientationOptions.#ctor(GroupDocs.Merger.Domain.Options.OrientationMode,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OrientationOptions" /> class.
+            </summary>
+      <param name="orientationMode">The orientation mode of <see cref="T:GroupDocs.Merger.Domain.Options.OrientationMode" /></param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OrientationOptions.#ctor(GroupDocs.Merger.Domain.Options.OrientationMode,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OrientationOptions" /> class.
+            </summary>
+      <param name="orientationMode">The orientation mode of <see cref="T:GroupDocs.Merger.Domain.Options.OrientationMode" /></param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.OrientationOptions.#ctor(GroupDocs.Merger.Domain.Options.OrientationMode,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.OrientationOptions" /> class.
+            </summary>
+      <param name="orientationMode">The orientation mode of <see cref="T:GroupDocs.Merger.Domain.Options.OrientationMode" /></param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.PageOptions">
+      <summary>
+            Provides options for specifying page or pages range.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PageOptions.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PageOptions" /> class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PageOptions.#ctor(GroupDocs.Merger.Domain.Options.IPager)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.PageOptions" /> class.
+            </summary>
+      <param name="pager">Pager for operation.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PageOptions.#ctor(System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PageOptions" /> class.
+            </summary>
+      <param name="pageNumbers">Pages for operation.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PageOptions.#ctor(System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PageOptions" /> class.
+            </summary>
+      <param name="startNumber">The start number.</param>
+      <param name="endNumber">The end number.</param>
+      <param name="mode">The mode.</param>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.PageOptions.Pages">
+      <summary>
+            Get page numbers collection.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.PdfAttachmentOptions">
+      <summary>
+            Provides options to attach the embedded object to Pdf.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                        More about adding attachment to PDF documents:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/how-to-add-attachment-to-pdf-document/">How to add attachment to PDF document.</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PdfAttachmentOptions.#ctor(System.Byte[],System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PdfAttachmentOptions" /> class.
+            </summary>
+      <param name="objectData">The data of the embedded object.</param>
+      <param name="extension">The extension of the embedded object.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PdfAttachmentOptions.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PdfAttachmentOptions" /> class.
+            </summary>
+      <param name="filePath">The file path of the embedded object.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.PreviewMode">
+      <summary>
+            Provides modes for the page previewing.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.PreviewMode.PNG">
+      <summary>
+            Preview mode as .png
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.PreviewMode.JPEG">
+      <summary>
+            Preview mode as .jpeg
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.PreviewMode.BMP">
+      <summary>
+            Preview mode as .bmp
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.PreviewOptions">
+      <summary>
+            Represents document preview options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Width">
+      <summary>
+            Preview width.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Height">
+      <summary>
+            Preview height.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode">
+      <summary>
+            Mode for preview.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.PreviewOptions.CreateStream">
+      <summary>
+            Delegate that defines method to create output page preview stream.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.PreviewOptions.ReleaseStream">
+      <summary>
+            Delegate that defines method to release output page preview stream.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.#ctor(GroupDocs.Merger.Domain.Common.CreatePageStream,GroupDocs.Merger.Domain.Options.PreviewMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PreviewOptions" /> class.
+            </summary>
+      <param name="createPageStream">The method that instantiates stream used to write output page data.</param>
+      <param name="previewMode">The preview mode of <see cref="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode" /></param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.#ctor(GroupDocs.Merger.Domain.Common.CreatePageStream,GroupDocs.Merger.Domain.Options.PreviewMode,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PreviewOptions" /> class.
+            </summary>
+      <param name="createPageStream">The method that instantiates stream used to write output page data.</param>
+      <param name="previewMode">The preview mode of <see cref="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode" /></param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.#ctor(GroupDocs.Merger.Domain.Common.CreatePageStream,GroupDocs.Merger.Domain.Options.PreviewMode,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PreviewOptions" /> class.
+            </summary>
+      <param name="createPageStream">The method that instantiates stream used to write output page data.</param>
+      <param name="previewMode">The preview mode of <see cref="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode" /></param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.#ctor(GroupDocs.Merger.Domain.Common.CreatePageStream,GroupDocs.Merger.Domain.Options.PreviewMode,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PreviewOptions" /> class.
+            </summary>
+      <param name="createPageStream">The method that instantiates stream used to write output page data.</param>
+      <param name="previewMode">The preview mode of <see cref="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode" /></param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.#ctor(GroupDocs.Merger.Domain.Common.CreatePageStream,GroupDocs.Merger.Domain.Common.ReleasePageStream,GroupDocs.Merger.Domain.Options.PreviewMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PreviewOptions" /> class.
+            </summary>
+      <param name="createPageStream">The method that instantiates stream used to write output page data.</param>
+      <param name="releasePageStream">The method that releases stream created by createPageStream method.</param>
+      <param name="previewMode">The preview mode of <see cref="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode" /></param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.#ctor(GroupDocs.Merger.Domain.Common.CreatePageStream,GroupDocs.Merger.Domain.Common.ReleasePageStream,GroupDocs.Merger.Domain.Options.PreviewMode,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PreviewOptions" /> class.
+            </summary>
+      <param name="createPageStream">The method that instantiates stream used to write output page data.</param>
+      <param name="releasePageStream">The method that releases stream created by createPageStream method.</param>
+      <param name="previewMode">The preview mode of <see cref="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode" /></param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.#ctor(GroupDocs.Merger.Domain.Common.CreatePageStream,GroupDocs.Merger.Domain.Common.ReleasePageStream,GroupDocs.Merger.Domain.Options.PreviewMode,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PreviewOptions" /> class.
+            </summary>
+      <param name="createPageStream">The method that instantiates stream used to write output page data.</param>
+      <param name="releasePageStream">The method that releases stream created by createPageStream method.</param>
+      <param name="previewMode">The preview mode of <see cref="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode" /></param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.#ctor(GroupDocs.Merger.Domain.Common.CreatePageStream,GroupDocs.Merger.Domain.Common.ReleasePageStream,GroupDocs.Merger.Domain.Options.PreviewMode,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.PreviewOptions" /> class.
+            </summary>
+      <param name="createPageStream">The method that instantiates stream used to write output page data.</param>
+      <param name="releasePageStream">The method that releases stream created by createPageStream method.</param>
+      <param name="previewMode">The preview mode of <see cref="P:GroupDocs.Merger.Domain.Options.PreviewOptions.Mode" /></param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.Validate(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Validates the preview options.
+            </summary>
+      <param name="fileType">The file type.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.PreviewOptions.GetPathByPageNumber(System.Int32,System.String)">
+      <summary>
+            Gets the full file path of previewed document by page number with defined extension.
+            </summary>
+      <param name="pageNumber">Page number of preview.</param>
+      <param name="extension">Extension of file.</param>
+      <returns>The full file path.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.RangeMode">
+      <summary>
+            Possible modes for the page ranging. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.RangeMode.AllPages">
+      <summary>
+            Range have all numbers from begin to end.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.RangeMode.OddPages">
+      <summary>
+            Range have only odd numbers from begin to end.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.RangeMode.EvenPages">
+      <summary>
+            Range have only even numbers from begin to end.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.RemoveOptions">
+      <summary>
+            Provides options for the page removing.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.RemoveOptions.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.RemoveOptions" /> class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.RemoveOptions.#ctor(System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.RemoveOptions" /> class.
+            </summary>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.RemoveOptions.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.RemoveOptions" /> class.
+            </summary>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.RemoveOptions.#ctor(System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.RemoveOptions" /> class.
+            </summary>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.RotateMode">
+      <summary>
+            Possible modes for the page rotation.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.RotateMode.Rotate90">
+      <summary>
+            Rotate to the right with 90 degrees.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.RotateMode.Rotate180">
+      <summary>
+            Rotate to the right with 180 degrees.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.RotateMode.Rotate270">
+      <summary>
+            Rotate to the right with 270 degrees.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.RotateOptions">
+      <summary>
+            Provides options for the page rotation.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.RotateOptions.Mode">
+      <summary>
+            Gets the mode for rotating (90, 180 or 270 degrees).
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.RotateOptions.#ctor(GroupDocs.Merger.Domain.Options.RotateMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.RotateOptions" /> class.
+            </summary>
+      <param name="rotateMode">The rotating mode of <see cref="P:GroupDocs.Merger.Domain.Options.RotateOptions.Mode" /></param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.RotateOptions.#ctor(GroupDocs.Merger.Domain.Options.RotateMode,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.RotateOptions" /> class.
+            </summary>
+      <param name="rotateMode">The rotating mode of <see cref="P:GroupDocs.Merger.Domain.Options.RotateOptions.Mode" /></param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.RotateOptions.#ctor(GroupDocs.Merger.Domain.Options.RotateMode,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.RotateOptions" /> class.
+            </summary>
+      <param name="rotateMode">The rotating mode of <see cref="P:GroupDocs.Merger.Domain.Options.RotateOptions.Mode" /></param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.RotateOptions.#ctor(GroupDocs.Merger.Domain.Options.RotateMode,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.RotateOptions" /> class.
+            </summary>
+      <param name="rotateMode">The rotating mode of <see cref="P:GroupDocs.Merger.Domain.Options.RotateOptions.Mode" /></param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.SaveOptions">
+      <summary>
+            Provides options for the document saving.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.SaveOptions.Type">
+      <summary>
+            File type.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SaveOptions.#ctor(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Options.SaveOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.SplitMode">
+      <summary>
+            Defines page splitting modes. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.SplitMode.Pages">
+      <summary>
+            Split pages
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.SplitMode.Interval">
+      <summary>
+            Split Intervals
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.SplitOptions">
+      <summary>
+            Provides options for the document page splitting.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.SplitOptions.Mode">
+      <summary>
+            Gets the mode for page splitting.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.SplitOptions.CreateStream">
+      <summary>
+            Delegate that defines method to create output split stream.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.SplitOptions.ReleaseStream">
+      <summary>
+            Delegate that defines method to release output split stream.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(System.String,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="filePathFormat">The file path format e.g. 'c:/split{0}.doc' or 'c:/split{0}.{1}' with already pre-defined extension.</param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(System.String,System.Int32[],GroupDocs.Merger.Domain.Options.SplitMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="filePathFormat">The file path format e.g. 'c:/split{0}.doc' or 'c:/split{0}.{1}' with already pre-defined extension.</param>
+      <param name="pageNumbers">Page numbers.</param>
+      <param name="splitMode">The splitting mode of <see cref="P:GroupDocs.Merger.Domain.Options.SplitOptions.Mode" />.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(System.String,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="filePathFormat">The file path format e.g. 'c:/split{0}.doc' or 'c:/split{0}.{1}' with already pre-defined extension.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(System.String,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="filePathFormat">The file path format e.g. 'c:/split{0}.doc' or 'c:/split{0}.{1}' with already pre-defined extension.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,System.Int32[],GroupDocs.Merger.Domain.Options.SplitMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="pageNumbers">Page numbers.</param>
+      <param name="splitMode">The splitting mode of <see cref="P:GroupDocs.Merger.Domain.Options.SplitOptions.Mode" />.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,GroupDocs.Merger.Domain.Common.ReleaseSplitStream)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="releaseSplitStream">The method that releases stream created by createPageStream method.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,GroupDocs.Merger.Domain.Common.ReleaseSplitStream,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="releaseSplitStream">The method that releases stream created by createPageStream method.</param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,GroupDocs.Merger.Domain.Common.ReleaseSplitStream,System.Int32[],GroupDocs.Merger.Domain.Options.SplitMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="releaseSplitStream">The method that releases stream created by createPageStream method.</param>
+      <param name="pageNumbers">Page numbers.</param>
+      <param name="splitMode">The splitting mode of <see cref="P:GroupDocs.Merger.Domain.Options.SplitOptions.Mode" />.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,GroupDocs.Merger.Domain.Common.ReleaseSplitStream,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="releaseSplitStream">The method that releases stream created by createPageStream method.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,GroupDocs.Merger.Domain.Common.ReleaseSplitStream,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="releaseSplitStream">The method that releases stream created by createPageStream method.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.Validate(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Validates the split options.
+            </summary>
+      <param name="fileType">The file type of <see cref="T:GroupDocs.Merger.Domain.FileType" /> class.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SplitOptions.GetPathByIndex(System.Int32,System.String)">
+      <summary>
+            Gets the full file path of splitted document by index with pre-defined extension.
+            </summary>
+      <param name="index">Index of splitted document.</param>
+      <param name="extension">Extension of file.</param>
+      <returns>The full file path.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.SwapOptions">
+      <summary>
+            Provides options for swapping document pages.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.SwapOptions.FirstPageNumber">
+      <summary>
+            First page number to exchange.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.SwapOptions.SecondPageNumber">
+      <summary>
+            Second page number to exchange.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.SwapOptions.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.SwapOptions" /> class.
+            </summary>
+      <param name="firstPageNumber">The first page number.</param>
+      <param name="secondPageNumber">The second page number.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.TextSplitMode">
+      <summary>
+            Possible text splitting modes. 
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.TextSplitMode.Lines">
+      <summary>
+            Split lines
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.TextSplitMode.Interval">
+      <summary>
+            Split Intervals
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.TextSplitOptions">
+      <summary>
+            Provides options for the document text splitting.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.TextSplitOptions.Mode">
+      <summary>
+            Mode for text splitting.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.TextSplitOptions.LineNumbers">
+      <summary>
+            Line numbers for text splitting.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.TextSplitOptions.CreateStream">
+      <summary>
+            Delegate that defines method to create output split stream.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.TextSplitOptions.ReleaseStream">
+      <summary>
+            Delegate that defines method to release output split stream.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.TextSplitOptions.#ctor(System.String,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.TextSplitOptions" /> class.
+            </summary>
+      <param name="filePathFormat">The file path format e.g. 'c:/split{0}.doc' or 'c:/split{0}.{1}' with already defined extension.</param>
+      <param name="lineNumbers">Line numbers for text splitting.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.TextSplitOptions.#ctor(System.String,GroupDocs.Merger.Domain.Options.TextSplitMode,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.TextSplitOptions" /> class.
+            </summary>
+      <param name="filePathFormat">The file path format e.g. 'c:/split{0}.doc' or 'c:/split{0}.{1}' with already defined extension.</param>
+      <param name="mode">Mode for text splitting.</param>
+      <param name="lineNumbers">Line numbers for text splitting.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.TextSplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.TextSplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="lineNumbers">Line numbers for text splitting.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.TextSplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,GroupDocs.Merger.Domain.Options.TextSplitMode,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.TextSplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="mode">Mode for text splitting.</param>
+      <param name="lineNumbers">Line numbers for text splitting.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.TextSplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,GroupDocs.Merger.Domain.Common.ReleaseSplitStream,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.TextSplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="releaseSplitStream">The method that releases stream created by createPageStream method.</param>
+      <param name="lineNumbers">Line numbers for text splitting.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.TextSplitOptions.#ctor(GroupDocs.Merger.Domain.Common.CreateSplitStream,GroupDocs.Merger.Domain.Common.ReleaseSplitStream,GroupDocs.Merger.Domain.Options.TextSplitMode,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.TextSplitOptions" /> class.
+            </summary>
+      <param name="createSplitStream">The method that instantiates stream used to write output split data.</param>
+      <param name="releaseSplitStream">The method that releases stream created by createPageStream method.</param>
+      <param name="mode">Mode for text splitting.</param>
+      <param name="lineNumbers">Line numbers for text splitting.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.TextSplitOptions.Validate(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Validates the split options.
+            </summary>
+      <param name="fileType">The file type of <see cref="T:GroupDocs.Merger.Domain.FileType" /> class.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.TextSplitOptions.GetPathByIndex(System.Int32,System.String)">
+      <summary>
+            Gets the full file path of splitted document by index with defined extension.
+            </summary>
+      <param name="index">Index of splitted document.</param>
+      <param name="extension">Extension of file.</param>
+      <returns>The full file path.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.UpdatePasswordOptions">
+      <summary>
+            Provides options for updating document password.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.UpdatePasswordOptions.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.UpdatePasswordOptions" /> class.
+            </summary>
+      <param name="newPassword">The new password.</param>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.UpdatePasswordOptions.NewPassword">
+      <summary>
+            A new password for the document protection.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.WordJoinMode">
+      <summary>
+            Possible modes for the Word joining.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.WordJoinMode.Default">
+      <summary>
+            Specifies Default Word joining.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Merger.Domain.Options.WordJoinMode.Continuous">
+      <summary>
+            Specifies Word joining without starting from new page.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.WordJoinOptions">
+      <summary>
+            The Word join options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Options.WordJoinOptions.Mode">
+      <summary>
+            The Word join mode.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.WordJoinOptions.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.WordJoinOptions" /> class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.WordJoinOptions.#ctor(System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.WordJoinOptions" /> class.
+            </summary>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.WordJoinOptions.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.WordJoinOptions" /> class.
+            </summary>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.WordJoinOptions.#ctor(System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.WordJoinOptions" /> class.
+            </summary>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.WordJoinOptions.#ctor(GroupDocs.Merger.Domain.FileType)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.WordJoinOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to join.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.WordJoinOptions.#ctor(GroupDocs.Merger.Domain.FileType,System.Int32[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.WordJoinOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to join.</param>
+      <param name="pageNumbers">Page numbers.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.WordJoinOptions.#ctor(GroupDocs.Merger.Domain.FileType,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.WordJoinOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to join.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Options.WordJoinOptions.#ctor(GroupDocs.Merger.Domain.FileType,System.Int32,System.Int32,GroupDocs.Merger.Domain.Options.RangeMode)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Domain.Options.WordJoinOptions" /> class.
+            </summary>
+      <param name="fileType">The type of the file to join.</param>
+      <param name="startNumber">The start page number.</param>
+      <param name="endNumber">The end page number.</param>
+      <param name="mode">The range mode.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Options.NamespaceDoc">
+      <summary>
+            The namespace provides classes to specify additional options when loading, joining, splitting, previewing and saving documents.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Result.DocumentInfo">
+      <summary>
+            Defines document description properties.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.DocumentInfo.Type">
+      <summary>
+            Gets the file type.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.DocumentInfo.Pages">
+      <summary>
+            Defines document pages collection.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.DocumentInfo.PageCount">
+      <summary>
+            The document pages count.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.DocumentInfo.Size">
+      <summary>
+            Document size in bytes
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Result.DocumentInfo.#ctor(GroupDocs.Merger.Domain.FileType,GroupDocs.Merger.Domain.Result.IPageInfo[],System.Int64)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Result.DocumentInfo" /> class.
+            </summary>
+      <param name="fileType">The type of the file.</param>
+      <param name="pages">The list of pages to view.</param>
+      <param name="size">The size of the file.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="fileType" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="pages" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Result.DocumentInfo.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Result.IDocumentInfo">
+      <summary>
+            Interface for the document description properties.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.IDocumentInfo.Type">
+      <summary>
+            Gets the file type.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.IDocumentInfo.Pages">
+      <summary>
+            Defines document pages collection.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.IDocumentInfo.PageCount">
+      <summary>
+            The document pages count.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.IDocumentInfo.Size">
+      <summary>
+            Document size in bytes.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Result.IPageInfo">
+      <summary>
+            Interface for the page description properties.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.IPageInfo.Number">
+      <summary>
+            Gets the page number.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.IPageInfo.Visible">
+      <summary>
+            Indicates whether page is visibile or not.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.IPageInfo.Width">
+      <summary>
+            Gets page width in pixels when converted to image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.IPageInfo.Height">
+      <summary>
+            Gets page height in pixels when converted to image.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Result.PageInfo">
+      <summary>
+            Defines page description properties.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.PageInfo.Number">
+      <summary>
+            Gets the page number.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.PageInfo.Visible">
+      <summary>
+            Indicates whether page is visibile or not.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.PageInfo.Width">
+      <summary>
+            Gets page width in pixels when converted to image.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.Domain.Result.PageInfo.Height">
+      <summary>
+            Gets page height in pixels when converted to image.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Result.PageInfo.#ctor(System.Int32,System.Boolean)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Result.PageInfo" /> class.
+            </summary>
+      <param name="number">The page number.</param>
+      <param name="visible">The page visibility indicator.</param>
+      <exception cref="T:System.ArgumentException">Thrown when <paramref name="number" /> is less or equal to zero.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Domain.Result.PageInfo.#ctor(System.Int32,System.Boolean,System.Int32,System.Int32)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Domain.Result.PageInfo" /> class.
+            </summary>
+      <param name="number">The page number.</param>
+      <param name="visible">The page visibility indicator.</param>
+      <param name="width">The width of the page in pixels when viewing as JPG or PNG.</param>
+      <param name="height">The height of the page in pixels when viewing as JPG or PNG.</param>
+      <exception cref="T:System.ArgumentException">Thrown when <paramref name="number" /> is less or equal to zero.</exception>
+      <exception cref="T:System.ArgumentException">Thrown when <paramref name="width" /> is less or equal to zero.</exception>
+      <exception cref="T:System.ArgumentException">Thrown when <paramref name="height" /> is less or equal to zero.</exception>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.Result.NamespaceDoc">
+      <summary>
+            The namespace provides classes which represent document results.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.NamespaceDoc">
+      <summary>
+            The namespace provides classes for working with document structure.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Domain.NamespaceGroupDoc">
+      <summary>
+            The namespace provides classes for working with document structure.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Exceptions.FileCorruptedException">
+      <summary>
+            The exception that is thrown when specified file could not be loaded because it appears to be corrupted.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Exceptions.FileTypeNotSupportedException">
+      <summary>
+            The exception that is thrown when specified file type is not supported.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Exceptions.FileTypeNotSupportedException.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Exceptions.FileTypeNotSupportedException" /> class.
+            </summary>
+      <param name="message">The message that describes the error.</param>
+    </member>
+    <member name="T:GroupDocs.Merger.Exceptions.GroupDocsMergerException">
+      <summary>
+            Represents errors that occur during document processing.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Exceptions.GroupDocsMergerException.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Exceptions.GroupDocsMergerException" /> class.
+            </summary>
+      <param name="message">The message that describes the error.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Exceptions.GroupDocsMergerException.#ctor(System.String,System.Exception)">
+      <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Merger.Exceptions.GroupDocsMergerException" /> class.
+            </summary>
+      <param name="message">The message that describes the error.</param>
+      <param name="innerException">The inner exception of the error.</param>
+    </member>
+    <member name="M:GroupDocs.Merger.Exceptions.GroupDocsMergerException.GetException(System.Exception)">
+      <summary>
+            Gets the GroupDocs Merger exception from the input exception.
+            </summary>
+      <param name="exception">The input exception.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:GroupDocs.Merger.Exceptions.IncorrectPasswordException">
+      <summary>
+            The exception that is thrown when specified password is incorrect.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Exceptions.PasswordRequiredException">
+      <summary>
+            The exception that is thrown when password is required to load the document.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Exceptions.NamespaceDoc">
+      <summary>
+            The namespace provides different classes for exceptions.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Exceptions.NamespaceGroupDoc">
+      <summary>
+            The namespace provides different classes for exceptions.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.License">
+      <summary>
+            Provides methods to license the component. Learn more about licensing <a href="https://purchase.groupdocs.com/faqs/licensing">here</a>.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about licensing: 
+                  <a target="_blank" href="https://purchase.groupdocs.com/faqs/licensing">GroupDocs Licensing FAQ</a></item>
+          <item>
+                    More about GroupDocs.Merger licensing:
+                 <a target="_blank" href="https://docs.groupdocs.com/display/mergernet/Evaluation+Limitations+and+Licensing+of+GroupDocs.Merger">Evaluation Limitations and Licensing</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.License.SetLicense(System.IO.Stream)">
+      <summary>
+            Licenses the component.
+            </summary>
+      <param name="licenseStream">The license stream.</param>
+      <example>
+            The following example demonstrates how to set a license
+            passing Stream of the license file.
+            <code lang="C#">
+            using (FileStream licenseStream = new FileStream("LicenseFile.lic", FileMode.Open))
+            {
+                GroupDocs.Merger.License lic = new GroupDocs.Merger.License();
+                lic.SetLicense(licenseStream);
+            }
+            </code></example>
+    </member>
+    <member name="M:GroupDocs.Merger.License.SetLicense(System.String)">
+      <summary>
+            Licenses the component.
+            </summary>
+      <param name="licensePath">The license path.</param>
+      <example>
+            The following example demonstrates how to set a license 
+            passing a path to the license file.
+            <code lang="C#">
+            string licensePath = "GroupDocs.Merger.lic";
+            GroupDocs.Merger.License lic = new GroupDocs.Merger.License();
+            lic.SetLicense(licensePath);
+            </code></example>
+    </member>
+    <member name="T:GroupDocs.Merger.Metered">
+      <summary>
+            Provides methods for applying <a href="https://purchase.groupdocs.com/faqs/licensing/metered">Metered</a> license.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about Metered licensing: 
+                  <a target="_blank" href="https://purchase.groupdocs.com/faqs/licensing/metered">Metered Licensing FAQ</a></item>
+          <item>
+                    More about GroupDocs.Merger licensing:
+                 <a target="_blank" href="https://docs.groupdocs.com/display/mergernet/Evaluation+Limitations+and+Licensing+of+GroupDocs.Merger">Evaluation Limitations and Licensing</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Metered.SetMeteredKey(System.String,System.String)">
+      <summary>
+            Activates product with Metered keys.
+            </summary>
+      <param name="publicKey">The public key.</param>
+      <param name="privateKey">The private key.</param>
+      <example>
+            Following example demonstrates how to activate product with Metered keys.
+            <code lang="C#">
+            string publicKey = "Public Key";
+            string privateKey = "Private Key";
+            
+            Metered metered = new Metered();
+            metered.SetMeteredKey(publicKey, privateKey);
+            </code></example>
+    </member>
+    <member name="M:GroupDocs.Merger.Metered.GetConsumptionQuantity">
+      <summary>
+             Retrieves amount of MBs processed.
+             </summary>
+      <example>
+             Following example demonstrates how to retrieve amount of MBs processed.
+             <code lang="C#">
+             string publicKey = "Public Key";
+             string privateKey = "Private Key";
+             
+             Metered metered = new Metered();
+             metered.SetMeteredKey(publicKey, privateKey);
+            
+             decimal mbProcessed = Metered.GetConsumptionQuantity();
+             </code></example>
+    </member>
+    <member name="M:GroupDocs.Merger.Metered.GetConsumptionCredit">
+      <summary>
+             Retrieves amount of used credits
+             </summary>
+      <example>
+             Following example demonstrates how to retrieve amount of MBs processed.
+             <code lang="C#">
+             string publicKey = "Public Key";
+             string privateKey = "Private Key";
+             
+             Metered metered = new Metered();
+             metered.SetMeteredKey(publicKey, privateKey);
+            
+             decimal usedCredits = Metered.GetConsumptionCredit();
+             </code></example>
+    </member>
+    <member name="T:GroupDocs.Merger.Logging.ConsoleLogger">
+      <summary>
+            Writes log messages to the console.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Logging.ConsoleLogger.Trace(System.String)">
+      <summary>
+            Writes trace message to the console.
+            Trace log messages provides generally useful information about application flow. 
+            </summary>
+      <param name="message">The trace message.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="message" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Logging.ConsoleLogger.Warning(System.String)">
+      <summary>
+            Writes warning message to the console.
+            Warning log messages provides information about unexpected and recoverable event in application flow.
+            </summary>
+      <param name="message">The warning message.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="message" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Logging.ConsoleLogger.Error(System.String,System.Exception)">
+      <summary>
+            Writes error message to the console.
+            Error log messages provides information about unrecoverable events in application flow.
+            </summary>
+      <param name="message">The error message.</param>
+      <param name="exception">The exception.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="message" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="exception" /> is null.</exception>
+    </member>
+    <member name="T:GroupDocs.Merger.Logging.ILogger">
+      <summary>
+            Defines the methods that are used to perform logging.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Logging.ILogger.Trace(System.String)">
+      <summary>
+            Writes trace log message;
+            Trace log messages provides generally useful information about application flow. 
+            </summary>
+      <param name="message">The trace message.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="message" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Logging.ILogger.Warning(System.String)">
+      <summary>
+            Writes warning log message;
+            Warning log messages provides information about unexpected and recoverable event in application flow.
+            </summary>
+      <param name="message">The warning message.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="message" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Logging.ILogger.Error(System.String,System.Exception)">
+      <summary>
+            Writes error log message;
+            Error log messages provides information about unrecoverable events in application flow. 
+            </summary>
+      <param name="message">The error message.</param>
+      <param name="exception">The exception.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="message" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="exception" /> is null.</exception>
+    </member>
+    <member name="T:GroupDocs.Merger.Logging.NamespaceDoc">
+      <summary>
+            The namespace provides classes for customizing logging behaviour.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Logging.NamespaceGroupDoc">
+      <summary>
+            The namespace provides classes for customizing logging behaviour.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Merger.Merger">
+      <summary>
+            Represents the main class that controls the document merging process.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(System.IO.Stream)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="document">The readable stream.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="document" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(System.IO.Stream,GroupDocs.Merger.Domain.Options.ILoadOptions)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="document">The readable stream.</param>
+      <param name="loadOptions">The document load options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="document" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="loadOptions" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(System.IO.Stream,GroupDocs.Merger.MergerSettings)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="document">The readable stream.</param>
+      <param name="settings">The Merger settings.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="document" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="settings" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(System.IO.Stream,GroupDocs.Merger.Domain.Options.ILoadOptions,GroupDocs.Merger.MergerSettings)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="document">The readable stream.</param>
+      <param name="loadOptions">The document load options.</param>
+      <param name="settings">The Merger settings.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="document" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="loadOptions" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="settings" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(GroupDocs.Merger.Domain.Common.Func{System.IO.Stream})">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="getFileStream">The method that returns readable stream.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="getFileStream" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(GroupDocs.Merger.Domain.Common.Func{System.IO.Stream},GroupDocs.Merger.Domain.Options.ILoadOptions)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="getFileStream">The method that returns readable stream.</param>
+      <param name="loadOptions">The document load options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="getFileStream" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="loadOptions" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(GroupDocs.Merger.Domain.Common.Func{System.IO.Stream},GroupDocs.Merger.MergerSettings)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="getFileStream">The method that returns readable stream.</param>
+      <param name="settings">The Merger settings.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="getFileStream" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="settings" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(GroupDocs.Merger.Domain.Common.Func{System.IO.Stream},GroupDocs.Merger.Domain.Options.ILoadOptions,GroupDocs.Merger.MergerSettings)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="getFileStream">The method that returns readable stream.</param>
+      <param name="loadOptions">The document load options.</param>
+      <param name="settings">The Merger settings.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="getFileStream" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="loadOptions" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="settings" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(System.String)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="filePath">The file path.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(System.String,GroupDocs.Merger.Domain.Options.ILoadOptions)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="filePath">The file path.</param>
+      <param name="loadOptions">The document load options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="loadOptions" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(System.String,GroupDocs.Merger.MergerSettings)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="filePath">The file path.</param>
+      <param name="settings">The Merger settings.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="settings" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.#ctor(System.String,GroupDocs.Merger.Domain.Options.ILoadOptions,GroupDocs.Merger.MergerSettings)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.Merger" /> class.
+            </summary>
+      <param name="filePath">The file path.</param>
+      <param name="loadOptions">The document load options.</param>
+      <param name="settings">The Merger settings.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="loadOptions" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="settings" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Dispose">
+      <summary>
+            Disposes resources.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.ImportDocument(GroupDocs.Merger.Domain.Options.IImportDocumentOptions)">
+      <summary>
+            Imports the document as attachment or embedded via Ole.
+            </summary>
+      <param name="importDocumentOptions">The embedded document import options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="importDocumentOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                        More about adding attachment to PDF documents:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/how-to-add-attachment-to-pdf-document/">How to add attachment to PDF document.</a></item>
+          <item>
+                        More about adding document to Word processing via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-word-processing-via-ole/">Add document to Word processing via OLE.</a></item>
+          <item>
+                        More about adding document to Presentation via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-presentation-via-ole/">Add document to Presentation via OLE.</a></item>
+          <item>
+                        More about adding document to Spreadsheet via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-spreadsheet-via-ole/">Add document to Spreadsheet via OLE.</a></item>
+          <item>
+                        More about adding document to Diagram via OLE:
+                        <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-to-diagram-via-ole/">Add document to Diagram via OLE.</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Join(System.IO.Stream)">
+      <summary>
+            Joins the documents into one single document.
+            </summary>
+      <param name="document">Joined document.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="document" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about document merge scenarios and use cases: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/merge-files/">How to merge PDF, Word, Excel and PowerPoint documents in 3 steps</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Join(System.IO.Stream,GroupDocs.Merger.Domain.Options.IJoinOptions)">
+      <summary>
+            Joins the documents into one single document.
+            </summary>
+      <param name="document">Joined document.</param>
+      <param name="joinOptions">The join options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="document" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="joinOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about document merge scenarios and use cases: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/merge-files/">How to merge PDF, Word, Excel and PowerPoint documents in 3 steps</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Join(System.IO.Stream,GroupDocs.Merger.Domain.Options.IImageJoinOptions)">
+      <summary>
+            Joins the documents into one single document.
+            </summary>
+      <param name="document">Joined document.</param>
+      <param name="joinOptions">The image join options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="document" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="joinOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about document merge scenarios and use cases: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/merge-files/">How to merge PDF, Word, Excel and PowerPoint documents in 3 steps</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Join(System.String)">
+      <summary>
+            Joins the documents into one single document.
+            </summary>
+      <param name="filePath">File path of the joined document.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about document merge scenarios and use cases: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/merge-files/">How to merge PDF, Word, Excel and PowerPoint documents in 3 steps</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Join(System.String,GroupDocs.Merger.Domain.Options.IJoinOptions)">
+      <summary>
+            Joins the documents into one single document.
+            </summary>
+      <param name="filePath">File path of the joined document.</param>
+      <param name="joinOptions">The join options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="joinOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about document merge scenarios and use cases: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/merge-files/">How to merge PDF, Word, Excel and PowerPoint documents in 3 steps</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Join(System.String,GroupDocs.Merger.Domain.Options.IImageJoinOptions)">
+      <summary>
+            Joins the documents into one single document.
+            </summary>
+      <param name="filePath">File path of the joined document.</param>
+      <param name="joinOptions">The image join options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="joinOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about document merge scenarios and use cases: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/merge-files/">How to merge PDF, Word, Excel and PowerPoint documents in 3 steps</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Split(GroupDocs.Merger.Domain.Options.ISplitOptions)">
+      <summary>
+            Splits the single document to the multiple documents.
+            </summary>
+      <param name="splitOptions">The page split options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="splitOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about document split scenarios and use cases: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/split-document/">How to split PDF, Word, Excel and PowerPoint documents in 3 lines of code</a></item>
+          <item>
+                    Quick guide about how to split text files in different ways:
+                 <a target="_blank" href="https://docs.groupdocs.com/merger/net/split-text-file/">Split text files guide</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Split(GroupDocs.Merger.Domain.Options.ITextSplitOptions)">
+      <summary>
+            Splits the single document to the multiple documents.
+            </summary>
+      <param name="splitOptions">The text split options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="splitOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about document split scenarios and use cases: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/split-document/">How to split PDF, Word, Excel and PowerPoint documents in 3 lines of code</a></item>
+          <item>
+                    Quick guide about how to split text files in different ways:
+                 <a target="_blank" href="https://docs.groupdocs.com/merger/net/split-text-file/">Split text files guide</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.ExtractPages(GroupDocs.Merger.Domain.Options.IExtractOptions)">
+      <summary>
+            Makes a new document with some pages from the source document.
+            </summary>
+      <param name="extractOptions">The page options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="extractOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to extract specific document pages or page range: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/extract-pages/">How to extract pages from PDF, Word, Excel and PowerPoint documents</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.AddPassword(GroupDocs.Merger.Domain.Options.IAddPasswordOptions)">
+      <summary>
+            Protects document with password.
+            </summary>
+      <param name="addPasswordOptions">The options for specifying the password.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="addPasswordOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to protect document with password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-password/">How to protect PDF, Word, Excel and PowerPoint documents with password</a></item>
+          <item>
+                    More about how to update or change document password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/update-document-password/">How to change document password</a></item>
+          <item>
+                    More about how to check document password protected or not: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/check-document-password-protection/">How to check document password protection</a></item>
+          <item>
+                    More about how to remove document password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/remove-document-password/">How to remove PDF, Word, Excel and PowerPoint documents password</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.IsPasswordSet">
+      <summary>
+            Checks whether document is password protected.
+            </summary>
+      <returns>Returns a value indicating whether document is protected or not.</returns>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to protect document with password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-password/">How to protect PDF, Word, Excel and PowerPoint documents with password</a></item>
+          <item>
+                    More about how to update or change document password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/update-document-password/">How to change document password</a></item>
+          <item>
+                    More about how to check document password protected or not: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/check-document-password-protection/">How to check document password protection</a></item>
+          <item>
+                    More about how to remove document password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/remove-document-password/">How to remove PDF, Word, Excel and PowerPoint documents password</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.RemovePassword">
+      <summary>
+            Removes password from document.
+            </summary>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to protect document with password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-password/">How to protect PDF, Word, Excel and PowerPoint documents with password</a></item>
+          <item>
+                    More about how to update or change document password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/update-document-password/">How to change document password</a></item>
+          <item>
+                    More about how to check document password protected or not: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/check-document-password-protection/">How to check document password protection</a></item>
+          <item>
+                    More about how to remove document password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/remove-document-password/">How to remove PDF, Word, Excel and PowerPoint documents password</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.UpdatePassword(GroupDocs.Merger.Domain.Options.IUpdatePasswordOptions)">
+      <summary>
+            Updates existing password for document.
+            </summary>
+      <param name="updatePasswordOptions">The options for specifying the current/new passwords.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="updatePasswordOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to protect document with password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/add-document-password/">How to protect PDF, Word, Excel and PowerPoint documents with password</a></item>
+          <item>
+                    More about how to update or change document password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/update-document-password/">How to change document password</a></item>
+          <item>
+                    More about how to check document password protected or not: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/check-document-password-protection/">How to check document password protection</a></item>
+          <item>
+                    More about how to remove document password: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/remove-document-password/">How to remove PDF, Word, Excel and PowerPoint documents password</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.ChangeOrientation(GroupDocs.Merger.Domain.Options.IOrientationOptions)">
+      <summary>
+            Applies a new orientation mode for the specified pages.
+            </summary>
+      <param name="orientationOptions">The change orientation options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="orientationOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to change orientation for Microsoft Word document pages: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/change-page-orientation/">How to change Microsoft Word document pages orientation</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.MovePage(GroupDocs.Merger.Domain.Options.IMoveOptions)">
+      <summary>
+            Moves page to a new position within document of known format.
+            </summary>
+      <param name="moveOptions">The move options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="moveOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to move page to another position within document: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/move-page/">How to move PDF, Word, Excel and PowerPoint document pages</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.RemovePages(GroupDocs.Merger.Domain.Options.IRemoveOptions)">
+      <summary>
+            Removes pages from document of known format. 
+            </summary>
+      <param name="removeOptions">The options for the numbers of pages to be removed.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="removeOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to remove page from document: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/remove-pages/">How to remove page from PDF, Word, Excel or PowerPoint document</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.SwapPages(GroupDocs.Merger.Domain.Options.ISwapOptions)">
+      <summary>
+            Swaps two pages within document of known format.
+            </summary>
+      <param name="swapOptions">The swap options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="swapOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to swap pages positions within document: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/swap-pages/">How to swap pages inside PDF, Word, Excel or PowerPoint document</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.RotatePages(GroupDocs.Merger.Domain.Options.IRotateOptions)">
+      <summary>
+            Rotate pages of the document.
+            </summary>
+      <param name="rotateOptions">The options for the page rotating.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="rotateOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    More about how to rotate PDF document pages: 
+                  <a target="_blank" href="https://docs.groupdocs.com/merger/net/rotate-pages/">How to rotate PDF document pages</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.GetDocumentInfo">
+      <summary>
+            Gets information about document pages: their sizes, maximum page height, the width of a page with the maximum height.
+            </summary>
+      <returns>Information about document properties.</returns>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    Learn more about document file type, pages count, size and many other format specific properties:
+                 <a target="_blank" href="https://docs.groupdocs.com/merger/net/get-document-information/">How to get document info using GroupDocs.Merger</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.GeneratePreview(GroupDocs.Merger.Domain.Options.IPreviewOptions)">
+      <summary>
+            Generates document pages preview.
+            </summary>
+      <param name="previewOptions">The preview options.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="previewOptions" /> is null.</exception>
+      <remarks>
+        <b>Learn more</b>
+        <list type="bullet">
+          <item>
+                    Learn more about how to generate previews for document pages:
+                 <a target="_blank" href="https://docs.groupdocs.com/merger/net/generate-document-pages-preview/">How to generate document pages preview using GroupDocs.Merger</a></item>
+        </list>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Save(System.IO.Stream)">
+      <summary>
+            Saves the result document to the stream <paramref name="document" />.
+            </summary>
+      <param name="document">The document stream.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="document" /> is null.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Save(System.String)">
+      <summary>
+            Saves the result document file to <paramref name="filePath" />.
+            </summary>
+      <param name="filePath">The file name or full file path.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+    </member>
+    <member name="M:GroupDocs.Merger.Merger.Save(System.String,System.Boolean)">
+      <summary>
+            Saves the result document file to <paramref name="filePath" />.
+            </summary>
+      <param name="filePath">The file path or name in case of default directory usage.</param>
+      <param name="useDefaultDirectory">Use the default directory from settings.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="filePath" /> is null or empty.</exception>
+    </member>
+    <member name="T:GroupDocs.Merger.MergerSettings">
+      <summary>
+            Defines settings for customizing <see cref="T:GroupDocs.Merger.Merger" /> behaviour.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Merger.MergerSettings.Logger">
+      <summary>
+            The logger implementation that is used for tracking document processing workflow.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.MergerSettings.#ctor">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.MergerSettings" /> class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Merger.MergerSettings.#ctor(GroupDocs.Merger.Logging.ILogger)">
+      <summary>
+            Initializes new instance of <see cref="T:GroupDocs.Merger.MergerSettings" /> class.
+            </summary>
+      <param name="logger">The logger implementation.</param>
+      <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="logger" /> is null.</exception>
+    </member>
+    <member name="T:GroupDocs.Merger.NamespaceDoc">
+      <summary>
+            The namespace provides classes which allow you to merge documents and manipulate document structure (split single document to multiple documents, reorder or replace document pages, change page orientation, manage document password and perform other manipulations) across wide range of supported document types - PDF, DOCX/DOC, PPTX/PPT, XLSX/XLS, VSDX/VSD, ODT, ODS, ODP, HTML, EPUB and many others.
+            <para /><para />
+            The main classes in this namespace are:
+            <list type="bullet"><item><see cref="T:GroupDocs.Merger.Merger" /> is the entry point for merging process.</item><item><see cref="T:GroupDocs.Merger.MergerSettings" /> provides an easy way to customize loging behaviour and etc.</item></list></summary>
+    </member>
+    <member name="T:GroupDocs.Merger.NamespaceGroupDoc">
+      <summary>
+            The namespace provides classes which allow you to merge documents and manipulate document structure (split single document to multiple documents, reorder or replace document pages, change page orientation, manage document password and perform other manipulations) across wide range of supported document types - PDF, DOCX/DOC, PPTX/PPT, XLSX/XLS, VSDX/VSD, ODT, ODS, ODP, HTML, EPUB and many others.
+            <para /><para />
+            The main classes in this namespace are:
+            <list type="bullet"><item><see cref="T:GroupDocs.Merger.Merger" /> is the entry point for merging process.</item><item><see cref="T:GroupDocs.Merger.MergerSettings" /> provides an easy way to customize loging behaviour and etc.</item></list></summary>
+    </member>
+  </members>
+</doc>
